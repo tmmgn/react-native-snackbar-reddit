@@ -1,1 +1,3 @@
-react-native-snackbar-reddit
+# React Native Snackbar styled reddit-like
+
+
