@@ -75,7 +75,7 @@ Content is required prop, every other prop is optional
 
 | Prop              | Description                                               | Default    |
 | ----------------- | --------------------------------------------------------- | ---------- |
-| **`content`**     | Content of Snackbar.                                      | _None_     |
+| **`content`**     | Content of Snackbar. Required                             | _None_     |
 | **`duration`**    | Delay time to cloase Snackbar in seconds.                 | `4`        |
 | **`action`**      | Sets action for snackbar                                  | `{}`       |
 | **`onClose`**     | A callback function Triggered when the Snackbar is closed | `() => {}` |
