@@ -90,7 +90,7 @@ class Snackbar extends Component {
       actionTextColor,
       contentStyle
     } = this.props;
-    const borderColor = borderColor
+    const typeBorderColor = borderColor
       ? borderColor
       : type === "info"
       ? "#1890ff"
@@ -132,7 +132,7 @@ class Snackbar extends Component {
                 backgroundColor: darkTheme ? "#323232" : "#ffffff",
                 borderRadius: 5,
                 borderLeftWidth: 5,
-                borderColor: borderColor
+                borderColor: typeBorderColor
               },
               style
             ]}
