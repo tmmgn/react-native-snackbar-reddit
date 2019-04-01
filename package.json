@@ -1,0 +1,21 @@
+{
+  "name": "react-native-snackbar-reddit",
+  "version": "0.0.1",
+  "description": "React Native Reddit Snackbar",
+  "author": "tmmgn",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/tmmgn/react-native-snackbar-reddit.git"
+    },
+  "homepage": "https://github.com/tmmgn/react-native-snackbar-reddit",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-native": "^0.59.1"
+  },
+  "browserslist": [
+    "last 1 major version",
+    "> 1%"
+  ]
+}
