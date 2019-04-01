@@ -76,7 +76,7 @@ export default class ExampleComponent extends Component {
 }
 ```
 
-### Properties for all progress components
+### Properties for all snackbars
 
 Content is required prop, every other prop is optional
 
