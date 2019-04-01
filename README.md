@@ -32,7 +32,7 @@ export default class App extends Component {
 ```
 
 Now you can use Snackbar inside any component of SnackProvider.  
-There are 4 types of snackbar with different border colors: Snackbar.info, Snackbar.error, Snackbar.success, Snackbar.warning
+There are 4 types of snackbar with different border colors: `Snackbar.info()`, `Snackbar.error()`, `Snackbar.success()`, `Snackbar.warning()`
 
 ```js
 import { Snackbar } from "react-native-snackbar-reddit";
