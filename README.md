@@ -1,3 +1,3 @@
-# React Native Snackbar styled reddit-like
+# React Native Snackbar with reddit-like style
 
 
