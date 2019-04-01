@@ -14,7 +14,7 @@ Inside your main app.js file define a snackbar provider
 import { SnackbarProvider } from 'react-native-snackbar-reddit';
 
 export default class App extends Component {
-	render() {
+render() {
     return (
       <SnackProvider>
         {...}
@@ -57,7 +57,7 @@ export default class ExampleComponent extends Component {
     });
   };
 
-	render() {
+render() {
     return (
       <View>
         <TouchableOpacity onPress={this.handleSnackbar} >
