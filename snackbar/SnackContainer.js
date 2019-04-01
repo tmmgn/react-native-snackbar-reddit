@@ -78,21 +78,36 @@ class Snackbar extends Component {
   };
 
   render() {
-    const { content, action, style, type, darkTheme, aboveTabBar } = this.props;
-    const borderColor =
-      type === "info"
-        ? "#1890ff"
-        : type === "success"
-        ? "#4CAF50"
-        : type === "error"
-        ? "#f5222d"
-        : type === "warning"
-        ? "#faad14"
-        : "#4CAF50";
+    const {
+      content,
+      action,
+      style,
+      type,
+      darkTheme,
+      aboveTabBar,
+      tabBarHeight,
+      borderColor,
+      actionTextColor,
+      contentStyle
+    } = this.props;
+    const borderColor = borderColor
+      ? borderColor
+      : type === "info"
+      ? "#1890ff"
+      : type === "success"
+      ? "#4CAF50"
+      : type === "error"
+      ? "#f5222d"
+      : type === "warning"
+      ? "#faad14"
+      : "#4CAF50";
     return (
       <SafeAreaView
         pointerEvents="box-none"
-        style={[styles.wrapper, { bottom: aboveTabBar ? 56 : 0 }]}
+        style={[
+          styles.wrapper,
+          { bottom: aboveTabBar ? (tabBarHeight ? tabBarHeight : 56) : 0 }
+        ]}
       >
         <Animated.View
           pointerEvents="box-none"
@@ -124,10 +139,11 @@ class Snackbar extends Component {
           >
             <Text
               style={[
-                styles.content,
                 {
                   color: darkTheme ? "#ffffff" : "#000000"
-                }
+                },
+                contentStyle,
+                styles.content
               ]}
             >
               {content}
@@ -141,7 +157,11 @@ class Snackbar extends Component {
               >
                 <Text
                   style={{
-                    color: darkTheme ? "#eeeeee" : "#757575"
+                    color: actionTextColor
+                      ? actionTextColor
+                      : darkTheme
+                      ? "#eeeeee"
+                      : "#757575"
                   }}
                 >
                   {action.label.toUpperCase()}

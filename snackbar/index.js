@@ -9,7 +9,11 @@ function notice(
   action,
   onClose,
   darkTheme,
-  aboveTabBar
+  aboveTabBar,
+  tabBarHeight,
+  borderColor,
+  actionTextColor,
+  contentStyle
 ) {
   const key = Portal.add(
     <SnackContainer
@@ -20,6 +24,10 @@ function notice(
       action={action}
       darkTheme={darkTheme}
       aboveTabBar={aboveTabBar}
+      tabBarHeight={tabBarHeight}
+      borderColor={borderColor}
+      actionTextColor={actionTextColor}
+      contentStyle={contentStyle}
       onAnimationEnd={() => Portal.remove(key)}
     />
   );
@@ -30,7 +38,18 @@ export default {
   SHORT: 4,
   MEDIUM: 7,
   LONG: 10,
-  show({ content, duration, action, onClose, darkTheme, aboveTabBar }) {
+  show({
+    content,
+    duration,
+    action,
+    onClose,
+    darkTheme,
+    aboveTabBar,
+    tabBarHeight,
+    borderColor,
+    actionTextColor,
+    contentStyle
+  }) {
     return notice(
       content,
       "info",
@@ -38,10 +57,25 @@ export default {
       action,
       onClose,
       darkTheme,
-      aboveTabBar
+      aboveTabBar,
+      tabBarHeight,
+      borderColor,
+      actionTextColor,
+      contentStyle
     );
   },
-  info({ content, duration, action, onClose, darkTheme, aboveTabBar }) {
+  info({
+    content,
+    duration,
+    action,
+    onClose,
+    darkTheme,
+    aboveTabBar,
+    tabBarHeight,
+    borderColor,
+    actionTextColor,
+    contentStyle
+  }) {
     return notice(
       content,
       "info",
@@ -49,10 +83,25 @@ export default {
       action,
       onClose,
       darkTheme,
-      aboveTabBar
+      aboveTabBar,
+      tabBarHeight,
+      borderColor,
+      actionTextColor,
+      contentStyle
     );
   },
-  success({ content, duration, action, onClose, darkTheme, aboveTabBar }) {
+  success({
+    content,
+    duration,
+    action,
+    onClose,
+    darkTheme,
+    aboveTabBar,
+    tabBarHeight,
+    borderColor,
+    actionTextColor,
+    contentStyle
+  }) {
     return notice(
       content,
       "success",
@@ -60,10 +109,25 @@ export default {
       action,
       onClose,
       darkTheme,
-      aboveTabBar
+      aboveTabBar,
+      tabBarHeight,
+      borderColor,
+      actionTextColor,
+      contentStyle
     );
   },
-  error({ content, duration, action, onClose, darkTheme, aboveTabBar }) {
+  error({
+    content,
+    duration,
+    action,
+    onClose,
+    darkTheme,
+    aboveTabBar,
+    tabBarHeight,
+    borderColor,
+    actionTextColor,
+    contentStyle
+  }) {
     return notice(
       content,
       "error",
@@ -71,10 +135,25 @@ export default {
       action,
       onClose,
       darkTheme,
-      aboveTabBar
+      aboveTabBar,
+      tabBarHeight,
+      borderColor,
+      actionTextColor,
+      contentStyle
     );
   },
-  warning({ content, duration, action, onClose, darkTheme, aboveTabBar }) {
+  warning({
+    content,
+    duration,
+    action,
+    onClose,
+    darkTheme,
+    aboveTabBar,
+    tabBarHeight,
+    borderColor,
+    actionTextColor,
+    contentStyle
+  }) {
     return notice(
       content,
       "warning",
@@ -82,7 +161,11 @@ export default {
       action,
       onClose,
       darkTheme,
-      aboveTabBar
+      aboveTabBar,
+      tabBarHeight,
+      borderColor,
+      actionTextColor,
+      contentStyle
     );
   }
 };
