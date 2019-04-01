@@ -2,6 +2,13 @@
 
 React Native Snackbar with reddit-like style
 
+![Success](https://user-images.githubusercontent.com/11463030/55329083-7538e000-5496-11e9-8cc6-8c6df0209ac1.png)
+![Error](https://user-images.githubusercontent.com/11463030/55329110-8124a200-5496-11e9-8346-96023577380f.png)
+![Warning](https://user-images.githubusercontent.com/11463030/55329112-81bd3880-5496-11e9-90e7-1247bf7c5c5e.png)
+![Info](https://user-images.githubusercontent.com/11463030/55329113-8255cf00-5496-11e9-9b4a-d085c46532b1.png)
+![With Action](https://user-images.githubusercontent.com/11463030/55329115-8255cf00-5496-11e9-8ba1-74a0b6d022c5.png)
+![Dark Theme](https://user-images.githubusercontent.com/11463030/55329114-8255cf00-5496-11e9-9be8-0e258b0bd276.png)
+
 ## Installation
 
 `$ npm install react-native-snackbar-reddit --save`
