@@ -25,43 +25,43 @@ export default class App extends Component {
 ```
 
 Now you can user Snackbar inside any component of SnackProvider
+There are 4 types of snackbar with different border colors: Snackbar.info, Snackbar.error, Snackbar.success, Snackbar.warning
 
 ```js
-import { Snackbar } from 'react-native-snackbar-reddit';
+import { Snackbar } from "react-native-snackbar-reddit";
 
 export default class ExampleComponent extends Component {
-
   handleSnackbar = () => {
     Snackbar.info({
-      content: "Info Snackbar Content",
+      content: "Info Snackbar Content"
     });
 
-     Snackbar.error({
+    Snackbar.error({
       content: "Error Snackbar Content",
       duration: 5,
       action: {
-      	onPress: () => console.warn('Action Pressed'),
-      	label: 'Action'
+        onPress: () => console.warn("Action Pressed"),
+        label: "Action"
       },
-      onClose: () => console.warn('Snackbar close'),
+      onClose: () => console.warn("Snackbar close"),
       darkTheme: true,
-      aboveTabBar: true,
+      aboveTabBar: true
     });
 
-      Snackbar.success({
-      content: "Success Snackbar Content",
+    Snackbar.success({
+      content: "Success Snackbar Content"
     });
 
-       Snackbar.warning({
-      content: "Warning Snackbar Content",
+    Snackbar.warning({
+      content: "Warning Snackbar Content"
     });
   };
 
-	render() {
+  render() {
     return (
       <View>
-        <TouchableOpacity onPress={this.handleSnackbar} >
-        	<Text>Activate snackbar</Text>
+        <TouchableOpacity onPress={this.handleSnackbar}>
+          <Text>Activate snackbar</Text>
         </TouchableOpacity>
       </View>
     );
@@ -71,14 +71,14 @@ export default class ExampleComponent extends Component {
 
 ### Properties for all progress components
 
-| Prop                                 | Description                                                                  | Default                |
-| ------------------------------------ | ---------------------------------------------------------------------------- | ---------------------- |
-| **`content`**                        | Content of Snackbar.                             							  | _None_                 |
-| **`duration`**                  	   | Delay time to cloase Snackbar in seconds. 									  | `4`                    |
-| **`action`** 						   | Sets action for snackbar           										  | `{}`             	   |
-| **`onClose`**                        | A callback function Triggered when the Snackbar is closed  				  | `() => {}`             |
-| **`darkTheme`**                      | Sets dark theme of Snackbar.                                                 | `false` 			   |
-| **`aboveTabBar`**                    | Sets Snackbar appearance above tab bar                                       | `false`                |
+| Prop              | Description                                               | Default    |
+| ----------------- | --------------------------------------------------------- | ---------- |
+| **`content`**     | Content of Snackbar.                                      | _None_     |
+| **`duration`**    | Delay time to cloase Snackbar in seconds.                 | `4`        |
+| **`action`**      | Sets action for snackbar                                  | `{}`       |
+| **`onClose`**     | A callback function Triggered when the Snackbar is closed | `() => {}` |
+| **`darkTheme`**   | Sets dark theme of Snackbar.                              | `false`    |
+| **`aboveTabBar`** | Sets Snackbar appearance above tab bar                    | `false`    |
 
 ## License
 
