@@ -4,15 +4,28 @@
   "description": "React Native Reddit Snackbar",
   "author": "tmmgn",
   "license": "MIT",
+   "keywords": [
+    "react-native",
+    "component",
+    "ios",
+    "android",
+    "reddit",
+    "snackbar",
+    "snack bar",
+    "toast"
+  ],
   "repository": {
       "type": "git",
       "url": "https://github.com/tmmgn/react-native-snackbar-reddit.git"
     },
+  "bugs": {
+    "url": "https://github.com/tmmgn/react-native-snackbar-reddit/issues"
+  },
   "homepage": "https://github.com/tmmgn/react-native-snackbar-reddit",
   "main": "index.js",
-  "dependencies": {
-    "react": "^16.8.3",
-    "react-native": "^0.59.1"
+  "peerDependencies": {
+    "react": ">=16.8.3",
+    "react-native": ">=0.59.1"
   },
   "browserslist": [
     "last 1 major version",
