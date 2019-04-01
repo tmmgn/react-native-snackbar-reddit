@@ -71,6 +71,8 @@ export default class ExampleComponent extends Component {
 
 ### Properties for all progress components
 
+Content is required prop, every other prop is optional
+
 | Prop              | Description                                               | Default    |
 | ----------------- | --------------------------------------------------------- | ---------- |
 | **`content`**     | Content of Snackbar.                                      | _None_     |
