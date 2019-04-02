@@ -38,11 +38,13 @@ There are 4 types of snackbar with different border colors: `Snackbar.info()`, `
 import { Snackbar } from "react-native-snackbar-reddit";
 
 export default class ExampleComponent extends Component {
-  handleSnackbar = () => {
+  handleInfoSnackbar = () => {
     Snackbar.info({
       content: "Info Snackbar Content"
     });
+  };
 
+  handleErrorSnackbar = () => {
     Snackbar.error({
       content: "Error Snackbar Content",
       duration: 5,
@@ -54,11 +56,15 @@ export default class ExampleComponent extends Component {
       darkTheme: true,
       aboveTabBar: true
     });
+  };
 
+  handleSuccessSnackbar = () => {
     Snackbar.success({
       content: "Success Snackbar Content"
     });
+  };
 
+  handleWarningSnackbar = () => {
     Snackbar.warning({
       content: "Warning Snackbar Content"
     });
@@ -67,8 +73,17 @@ export default class ExampleComponent extends Component {
   render() {
     return (
       <View>
-        <TouchableOpacity onPress={this.handleSnackbar}>
-          <Text>Activate snackbar</Text>
+        <TouchableOpacity onPress={this.handleInfoSnackbar}>
+          <Text>Info Snack</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.handleErrorSnackbar}>
+          <Text>Error Snack</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.handleSuccessSnackbar}>
+          <Text>Success Snack</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.handleWarningSnackbar}>
+          <Text>Warning snack</Text>
         </TouchableOpacity>
       </View>
     );
