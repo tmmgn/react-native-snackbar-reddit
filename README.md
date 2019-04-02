@@ -106,7 +106,6 @@ Content is required prop, every other prop is optional
 | **`aboveTabBar`**     | Sets Snackbar appearance above tab bar                       | `false`    |
 | **`tabBarHeight`**    | TabBar Height in px. Works only when aboveTabBar set to true | `56`       |
 | **`borderColor`**     | Custom border color                                          |            |
-| **`actionTextColor`** | Custom action button text color                              | `#757575`  |
 
 ## License
 
