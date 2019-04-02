@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     maxWidth: 420
   },
   container: {
-    elevation: 6,
+    elevation: 2,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -191,11 +191,11 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 3
+      height: 1
     },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
     minHeight: 48,
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
     paddingRight: 16
   },
   content: {
