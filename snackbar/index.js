@@ -13,7 +13,10 @@ function notice(
   tabBarHeight,
   borderColor,
   actionTextColor,
-  contentStyle
+  contentStyle,
+  position,
+  disableBorder,
+  borderWidth
 ) {
   const key = Portal.add(
     <SnackContainer
@@ -28,6 +31,9 @@ function notice(
       borderColor={borderColor}
       actionTextColor={actionTextColor}
       contentStyle={contentStyle}
+      position={position}
+      disableBorder={disableBorder}
+      borderWidth={borderWidth}
       onAnimationEnd={() => Portal.remove(key)}
     />
   );
@@ -48,7 +54,10 @@ export default {
     tabBarHeight,
     borderColor,
     actionTextColor,
-    contentStyle
+    contentStyle,
+    position,
+    disableBorder,
+    borderWidth
   }) {
     return notice(
       content,
@@ -61,7 +70,10 @@ export default {
       tabBarHeight,
       borderColor,
       actionTextColor,
-      contentStyle
+      contentStyle,
+      position,
+      disableBorder,
+      borderWidth
     );
   },
   info({
@@ -74,7 +86,10 @@ export default {
     tabBarHeight,
     borderColor,
     actionTextColor,
-    contentStyle
+    contentStyle,
+    position,
+    disableBorder,
+    borderWidth
   }) {
     return notice(
       content,
@@ -87,7 +102,10 @@ export default {
       tabBarHeight,
       borderColor,
       actionTextColor,
-      contentStyle
+      contentStyle,
+      position,
+      disableBorder,
+      borderWidth
     );
   },
   success({
@@ -100,7 +118,10 @@ export default {
     tabBarHeight,
     borderColor,
     actionTextColor,
-    contentStyle
+    contentStyle,
+    position,
+    disableBorder,
+    borderWidth
   }) {
     return notice(
       content,
@@ -113,7 +134,10 @@ export default {
       tabBarHeight,
       borderColor,
       actionTextColor,
-      contentStyle
+      contentStyle,
+      position,
+      disableBorder,
+      borderWidth
     );
   },
   error({
@@ -126,7 +150,10 @@ export default {
     tabBarHeight,
     borderColor,
     actionTextColor,
-    contentStyle
+    contentStyle,
+    position,
+    disableBorder,
+    borderWidth
   }) {
     return notice(
       content,
@@ -139,7 +166,10 @@ export default {
       tabBarHeight,
       borderColor,
       actionTextColor,
-      contentStyle
+      contentStyle,
+      position,
+      disableBorder,
+      borderWidth
     );
   },
   warning({
@@ -152,7 +182,10 @@ export default {
     tabBarHeight,
     borderColor,
     actionTextColor,
-    contentStyle
+    contentStyle,
+    position,
+    disableBorder,
+    borderWidth
   }) {
     return notice(
       content,
@@ -165,7 +198,10 @@ export default {
       tabBarHeight,
       borderColor,
       actionTextColor,
-      contentStyle
+      contentStyle,
+      position,
+      disableBorder,
+      borderWidth
     );
   }
 };
