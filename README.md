@@ -1,6 +1,6 @@
 # React Native Snackbar Reddit
 
-React Native Snackbar js-only implementation with reddit-like style
+React Native Snackbar with reddit-like style
 
 ![Success](https://user-images.githubusercontent.com/11463030/55329083-7538e000-5496-11e9-8cc6-8c6df0209ac1.png)
 ![Error](https://user-images.githubusercontent.com/11463030/55329110-8124a200-5496-11e9-8346-96023577380f.png)
@@ -106,6 +106,9 @@ Content is required prop, every other prop is optional
 | **`aboveTabBar`**     | Sets Snackbar appearance above tab bar                       | `false`    |
 | **`tabBarHeight`**    | TabBar Height in px. Works only when aboveTabBar set to true | `56`       |
 | **`borderColor`**     | Custom border color                                          |            |
+| **`position`**        | Snackbar position. Values are "top" and "bottom"             | `bottom`   |
+| **`disableBorder`**   | Prop for disabling border on Snackbar                        | `false`    |
+| **`borderWidth`**     | Snackbar border width                                        | `5`        |
 
 ## License
 
