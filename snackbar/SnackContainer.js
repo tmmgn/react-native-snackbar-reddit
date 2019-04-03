@@ -21,16 +21,31 @@ class Snackbar extends Component {
 
   static defaultProps = {
     duration: DURATION_SHORT,
-    onClose: () => {}
+    onClose: () => {},
+    style: {},
+    type: "info",
+    darkTheme: false,
+    aboveTabBar: false,
+    tabBarHeight: 56,
+    borderColor: null,
+    actionTextColor: null,
+    contentStyle: {},
+    position: "bottom",
+    disableBorder: false,
+    borderWidth: 5
   };
 
   state = {
-    opacity: new Animated.Value(0.0)
+    opacity: new Animated.Value(0.0),
+    snackVisible: false
   };
 
   componentDidMount() {
     const timing = Animated.timing;
     const { onClose, onAnimationEnd, duration } = this.props;
+
+    this.state.opacity.addListener(this.listenOpacityValue);
+
     if (this.anim) {
       this.anim = null;
     }
@@ -50,6 +65,13 @@ class Snackbar extends Component {
           useNativeDriver: true
         })
       );
+      this.setState({
+        closeAnimation: timing(this.state.opacity, {
+          toValue: 0,
+          duration: 100,
+          useNativeDriver: true
+        })
+      });
     }
     this.anim = Animated.sequence(animArr);
     this.anim.start(() => {
@@ -66,15 +88,41 @@ class Snackbar extends Component {
   }
 
   componentWillUnmount() {
+    this.state.opacity.removeListener(this.listenOpacityValue);
     if (this.anim) {
       this.anim.stop();
       this.anim = null;
     }
   }
 
+  listenOpacityValue = ({ value }) => {
+    if (value === 1) {
+      this.setState({
+        snackVisible: true
+      });
+    }
+  };
+
   _handleOnPress = () => {
+    const { onClose, onAnimationEnd, duration } = this.props;
+
     this.props.action.onPress();
-    this.props.onAnimationEnd();
+    if (this.state.closeAnimation) {
+      this.state.closeAnimation.start(() => {
+        if (duration > 0) {
+          this.anim = null;
+          if (onClose) {
+            onClose();
+          }
+          if (onAnimationEnd) {
+            onAnimationEnd();
+          }
+        }
+      });
+    } else if (this.anim) {
+      this.anim.stop();
+      this.anim = null;
+    }
   };
 
   render() {
@@ -88,7 +136,9 @@ class Snackbar extends Component {
       tabBarHeight,
       borderColor,
       actionTextColor,
-      contentStyle
+      contentStyle,
+      disableBorder,
+      borderWidth
     } = this.props;
     const typeBorderColor = borderColor
       ? borderColor
@@ -101,13 +151,18 @@ class Snackbar extends Component {
       : type === "warning"
       ? "#faad14"
       : "#4CAF50";
+
+    let scaleAnimation = !this.state.snackVisible
+      ? this.state.opacity.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0.9, 1]
+        })
+      : 1;
+
     return (
       <SafeAreaView
         pointerEvents="box-none"
-        style={[
-          styles.wrapper,
-          { bottom: aboveTabBar ? (tabBarHeight ? tabBarHeight : 56) : 0 }
-        ]}
+        style={[styles.wrapper, { bottom: aboveTabBar ? tabBarHeight : 0 }]}
       >
         <Animated.View
           pointerEvents="box-none"
@@ -116,10 +171,7 @@ class Snackbar extends Component {
             opacity: this.state.opacity,
             transform: [
               {
-                scale: this.state.opacity.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0.9, 1]
-                })
+                scale: scaleAnimation
               }
             ]
           }}
@@ -131,7 +183,7 @@ class Snackbar extends Component {
               {
                 backgroundColor: darkTheme ? "#323232" : "#ffffff",
                 borderRadius: 5,
-                borderLeftWidth: 5,
+                borderLeftWidth: disableBorder ? 0 : borderWidth,
                 borderColor: typeBorderColor
               },
               style
