@@ -18,7 +18,7 @@ React Native Snackbar with reddit-like style
 Inside your main app.js file define a snackbar provider
 
 ```js
-import { SnackbarProvider } from 'react-native-snackbar-reddit';
+import { SnackProvider } from 'react-native-snackbar-reddit';
 
 export default class App extends Component {
   render() {
