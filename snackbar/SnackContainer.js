@@ -231,7 +231,6 @@ class Snackbar extends Component {
 const styles = StyleSheet.create({
   wrapper: {
     position: "absolute",
-    bottom: 0,
     width: "100%",
     maxWidth: 420
   },
