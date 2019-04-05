@@ -138,7 +138,8 @@ class Snackbar extends Component {
       actionTextColor,
       contentStyle,
       disableBorder,
-      borderWidth
+      borderWidth,
+      position
     } = this.props;
     const typeBorderColor = borderColor
       ? borderColor
@@ -162,7 +163,7 @@ class Snackbar extends Component {
     return (
       <SafeAreaView
         pointerEvents="box-none"
-        style={[styles.wrapper, { bottom: aboveTabBar ? tabBarHeight : 0 }]}
+        style={[styles.wrapper, { [position]: aboveTabBar ? tabBarHeight : 0 }]}
       >
         <Animated.View
           pointerEvents="box-none"
