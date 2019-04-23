@@ -95,20 +95,20 @@ export default class ExampleComponent extends Component {
 
 Content is required prop, every other prop is optional
 
-| Prop                  | Description                                                  | Default    |
-| --------------------- | ------------------------------------------------------------ | ---------- |
-| **`content`**         | Content of Snackbar. Required                                | _None_     |
-| **`duration`**        | Delay time to cloase Snackbar in seconds                     | `4`        |
-| **`action`**          | Sets action for snackbar                                     | `{}`       |
-| **`onClose`**         | A callback function Triggered when the Snackbar is closed    | `() => {}` |
-| **`actionTextColor`** | Custom action button text color                              | `#757575`  |
-| **`contentStyle`**    | Style object for snackbar text styling                       | `{}`       |
-| **`aboveTabBar`**     | Sets Snackbar appearance above tab bar                       | `false`    |
-| **`tabBarHeight`**    | TabBar Height in px. Works only when aboveTabBar set to true | `56`       |
-| **`borderColor`**     | Custom border color                                          |            |
-| **`position`**        | Snackbar position. Values are "top" and "bottom"             | `bottom`   |
-| **`disableBorder`**   | Prop for disabling border on Snackbar                        | `false`    |
-| **`borderWidth`**     | Snackbar border width                                        | `5`        |
+| Prop                  | Description                                                  | Default                           |
+| --------------------- | ------------------------------------------------------------ | --------------------------------- |
+| **`content`**         | Content of Snackbar. Required                                | _None_                            |
+| **`duration`**        | Delay time to cloase Snackbar in seconds                     | `4`                               |
+| **`action`**          | Sets action for snackbar                                     | `{ onPress: () => {}, label: ""}` |
+| **`onClose`**         | A callback function Triggered when the Snackbar is closed    | `() => {}`                        |
+| **`actionTextColor`** | Custom action button text color                              | `#757575`                         |
+| **`contentStyle`**    | Style object for snackbar text styling                       | `{}`                              |
+| **`aboveTabBar`**     | Sets Snackbar appearance above tab bar                       | `false`                           |
+| **`tabBarHeight`**    | TabBar Height in px. Works only when aboveTabBar set to true | `56`                              |
+| **`borderColor`**     | Custom border color                                          |                                   |
+| **`position`**        | Snackbar position. Values are "top" and "bottom"             | `bottom`                          |
+| **`disableBorder`**   | Prop for disabling border on Snackbar                        | `false`                           |
+| **`borderWidth`**     | Snackbar border width                                        | `5`                               |
 
 ## License
 
